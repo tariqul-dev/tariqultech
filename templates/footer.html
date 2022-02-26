@@ -1,0 +1,61 @@
+{% extends "basic.html" %}
+
+{% block title %}
+Footer
+{% endblock title %}
+
+{% load static %}
+{% block body %}
+
+
+
+<!-- Footer section start -->
+<section class="footer-wrapper mt-3 mt-md-0">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-6 text-center text-md-start">
+                <div class="footer-logo mb-3 mb-md-0">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="img-fluid rounded-pill">
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <ul
+                    class="list-unstyled d-flex justify-content-center justify-content-md-end justify-content-lg-center social-icon mb-3 mb-md-0">
+                    <li>
+                        <a href="https://www.facebook.com/tariqulislam.rumi.1" target='_blank'><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/tariqul_404/" target='_blank'><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/md-tariqul-islam-4281401b2/" target='_blank'><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/tariqul-dev" target='_blank'><i
+                                class="fa-brands fa-github"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="copyright-text text-lg-start text-center mb-3 mb-lg-0">
+                    <p class="mb-0">
+                        Copyright &copy; 2022 <a href="#">Tariqul</a>. All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer section end -->
+
+{% endblock body %}
+

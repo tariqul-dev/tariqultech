@@ -1,0 +1,72 @@
+{% extends "basic.html" %}
+
+{% block title %}About{% endblock title %}
+
+{% load static %}
+
+{% block body %}
+<!-- about section start -->
+<section class="what_i_do-wrapper mt-5">
+    <div class="container mt-5">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <img src="{{ abouts.0.image.url }}" class="img-fluid rounded-pill" alt="">
+            </div>
+
+            <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+                <div class="my-3 my-lg-0 p-5">
+                    <span class="subtitle">
+                        {{ abouts.0.greetings }}
+                    </span>
+                    <p>
+                        {{ abouts.0.about_quote }}
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- about section end -->
+
+<!-- Skill section start -->
+<section class="skill-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mb-4">
+                <span class="subtitle">
+                    Those skills I have
+                </span>
+                <h2>
+                    Skills
+                </h2>
+                <p>
+                    I have achieved these skills by myself. <br class="d-none d-md-block">
+                    Working with those technologies, gathering new experiences
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for skill in skills %}
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <img src="{{ skill.image.url }}" alt="about" class="img-fluid mb-4">
+                        <h3>{{ skill.name }}</h3>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<!-- Skill section end -->
+
+{% include 'contact.html' %}
+
+{% endblock body %}

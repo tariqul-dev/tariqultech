@@ -1,0 +1,87 @@
+{% extends "basic.html" %}
+
+{% block title %}
+Projects
+{% endblock title %}
+
+{% block body %}
+
+{% for project in projects %}
+
+{% if forloop.counter|divisibleby:2 %}
+
+<!-- what i do section start -->
+<section class="project-wrapper what_i_do-wrapper mt-4">
+    <div class="container">
+        <div class="row justify-content-between text-center align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <img src="{{ project.image.url }}" alt="projects" class='img-fluid rounded-3'>
+
+            </div>
+
+            <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+                <div class="my-3 my-lg-0">
+                    <span class="subtitle text-uppercase">
+                        {{ project.category }}
+                    </span>
+                    <h2> {{ project.name }} </h2>
+                    <p>
+                        {{ project.details }}
+                    </p>
+                    <a href=" {{ project.github_url }} " class="main-btn" target='_blank'> View App </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- what i do section end -->
+
+{% else %}
+
+<!-- featured skill start -->
+<section class="project-wrapper what_i_do-wrapper skill-wrapper mt-5">
+    <div class="container mt-5">
+        <div class="row justify-content-between  align-items-center">
+
+            <div class="col-lg-5 mb-4 mb-lg-0 text-center text-lg-start order-2 order-lg-1">
+                <div class="my-3 my-lg-0">
+
+                    <span class="subtitle text-uppercase">
+                        {{ project.category }}
+                    </span>
+                    <h2> {{ project.name }} </h2>
+                    <p>
+                        {{ project.details }}
+                    </p>
+                    <a href=" {{ project.github_url }} " class="main-btn" target='_blank'> View App </a>
+
+                </div>
+            </div>
+            <div class="col-lg-7 ps-lg-5 text-center order-1 order-lg-1">
+                <img src="{{ project.image.url }}" alt="projects" class='img-fluid rounded-3'>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- featured skill end -->
+
+{% endif %}
+
+
+
+{% endfor %}
+
+
+
+
+
+
+
+{% include 'contact.html' %}
+
+{% endblock body %}
