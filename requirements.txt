@@ -1,5 +1,6 @@
-django
+django~=3.2.5
 gunicorn
 django-heroku
 whitenoise
 Pillow
+dj_database_url
